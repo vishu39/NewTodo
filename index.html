@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;600&family=Open+Sans&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5d8274fbc1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>ToDo List</title>
+  </head>
+  <body>
+    <div class="main">
+      <!-- It will contain all the element to the todo-->
+      <!--heading and clear all button-->
+      <div class="header">
+        <!--This div is useds for only heading and clear all button-->
+        <h1>Todoey!</h1>
+        <button
+          id="clr"
+          type="submit"
+          class="btn btnclear"
+          onclick="clearAll(this)"
+        >
+          Clear All
+        </button>
+      </div>
+      <!--Input label and add text button-->
+      <div class="container">
+        <label class="label" name="todo">Todo</label>
+        <input
+          id="inp"
+          class="input inp-inp"
+          type="text"
+          placeholder="Add Task"
+        />
+        <label class="label" name="Importance">Importance</label>
+        <input
+          id="imp"
+          class="input inp-importance"
+          type="text"
+          placeholder="Least Important"
+        />
+        <input type="hidden" id="index" />
+        <button id="sub" type="submit" class="btn btn-Add btn-streached">
+          Add
+        </button>
+      </div>
+      <!--All bottom buttons-->
+      <div class="btbtns">
+        <button
+          id="All"
+          type="submit"
+          class="btn btn-All filter-btn"
+          data-type="All"
+        >
+          All
+        </button>
+        <button
+          id="comp"
+          type="submit"
+          class="btn btn-completed filter-btn"
+          data-type="completed"
+        >
+          Completed
+        </button>
+        <button
+          id="uncomp"
+          type="submit"
+          class="btn btn-uncompleted filter-btn"
+          data-type="uncompleted"
+        >
+          Uncompleted
+        </button>
+      </div>
+
+      <!--List of our todo-->
+      <ul id="list" class="list-group">
+        <!-- <li class="list-item">
+            <div class="task-container">
+              <span class="task">asdasd</span>
+              <span class="Importance">asdasd</span>
+            </div>
+            <span class="icons icon-box">
+              <i class="fas fa-check"></i>
+              <i class="fas fa-trash-alt"></i
+            ></span> 
+          </li>-->
+      </ul>
+    </div>
+  </body>
+  <!--<script src="main.js"></script>-->
+  <script src="main.js"></script>
+  <script src="New.js"></script>
+</html>
