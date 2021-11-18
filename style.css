@@ -20,25 +20,29 @@ body {
 /*main div of the page*/
 .main {
   height: auto;
-  padding: 1rem 0;
 }
 /*----------------------------------------------------------------------------------------------*/
 /* main header of our html*/
 .header {
   display: flex;
-  margin: 0rem 25vw;
+  margin: 0rem 4vw;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    margin: 0% 30vw;
+  }
 }
 /*----------------------------------------------------------------------------------------------*/
 /*heading of our html*/
 h1 {
   color: var(--color-heading);
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 /*heading end*/
@@ -57,7 +61,7 @@ h1 {
 /*button clear*/
 .btnclear {
   transition: 0.2s;
-  margin: 1rem 1rem;
+  margin: 1rem;
   padding: 1rem 1.5rem;
   font-size: 1rem;
 }
@@ -69,7 +73,9 @@ h1 {
 .btn-Add {
   transition: 0.2s;
   font-size: 1rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
+  position: relative;
+  left: 2rem;
 }
 .btn-Add:hover {
   background-color: #079664;
@@ -77,29 +83,33 @@ h1 {
 
 .btn-streached {
   padding: 1rem 0;
-  margin-left: 1rem;
-  margin-right: 2.8rem;
+  width: 80vw;
 }
 /*----------------------------------------------------------------------------------------------*/
 /*btbtns or bottom buttons*/
 .btbtns {
-  margin: 0rem 26vw;
+  margin: 0rem 4rem;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   font-size: 1rem;
-  padding: 0.5rem 0.5vw;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .btbtns {
+    flex-wrap: nowrap;
     font-size: 1.3rem;
+    margin: 0rem 31vw;
+    justify-content: space-evenly;
   }
 }
 
 /*button All used for showing all task*/
 .btn-All {
+  margin-bottom: 1rem;
   transition: 0.2s;
-  padding: 1rem 1vw;
-  font-size: 1.1rem;
+  padding: 1rem 0rem;
+  width: 90vw;
+  font-size: 1rem;
 }
 .btn-All:hover {
   background-color: #079664;
@@ -107,9 +117,11 @@ h1 {
 
 /*button Completed  used for showing completed task*/
 .btn-completed {
+  margin-bottom: 1rem;
   transition: 0.2s;
-  padding: 1rem 1vw;
-  font-size: 1.1rem;
+  padding: 1rem 0rem;
+  width: 90vw;
+  font-size: 1rem;
 }
 .btn-completed:hover {
   background-color: #079664;
@@ -117,16 +129,18 @@ h1 {
 
 /*button Uncompleted used for show uncompleted task*/
 .btn-uncompleted {
+  margin-bottom: 1rem;
   transition: 0.2s;
-  padding: 1rem 1vw;
-  font-size: 1.1rem;
+  padding: 1rem 0rem;
+  width: 90vw;
+  font-size: 1rem;
 }
 .btn-uncompleted:hover {
   background-color: #079664;
 }
 
 /*button for desktop version */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .btn {
     margin: 2.5rem 0;
   }
@@ -137,30 +151,47 @@ h1 {
   }
   .btn-Add {
     font-size: 1.3rem;
-    margin: 3rem 1rem;
+    margin: 2rem 0rem;
+    left: 0.5em;
   }
   .btn-All {
     font-size: 1.3rem;
-    padding: 1rem 3.5vw;
+    padding: 1rem 0rem;
+    width: 8vw;
   }
   .btn-completed {
     font-size: 1.3rem;
-    padding: 1rem 4.5vw;
+    padding: 1rem 0rem;
+    width: 12vw;
   }
   .btn-uncompleted {
     font-size: 1.3rem;
-    padding: 1rem 3.5vw;
+    padding: 1rem 0rem;
+    width: 15vw;
   }
   .btn-streached {
-    margin-left: 1rem;
-    margin-right: 3rem;
+    width: 36vw;
   }
 }
+/*@media screen and (min-width: 200px) and (max-width: 450px) {
+  .btn-All {
+    font-size: 1.3rem;
+    padding: 1rem 10rem;
+  }
+  .btn-completed {
+    font-size: 1.3rem;
+    padding: 1rem 7.5rem;
+  }
+  .btn-uncompleted {
+    font-size: 1.3rem;
+    padding: 1rem 7rem;
+  }
+}*/
 /*----------------------------------------------------------------------------------------------*/
 /*container inputs*/
 .container {
+  margin: 0rem 2rem;
   color: var(--color-heading);
-  margin: 0rem 25vw;
   display: flex;
   flex-direction: column;
   background-color: var(--color-header);
@@ -173,10 +204,11 @@ h1 {
   border: 0;
   outline: 0;
   border-radius: 40px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-right: 3rem;
   margin-left: 1.2rem;
   padding: 0.8rem;
+  width: 80vw;
 }
 /*labels*/
 .label {
@@ -192,37 +224,51 @@ h1 {
   padding: 1rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0rem 31vw;
+  }
   .label {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
   ::placeholder {
     font-size: 1.2rem;
   }
   .input {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    width: 35vw;
   }
 }
+/*-------------------------------------------data List------------------------------------------*/
+
 /*----------------------------------------------------------------------------------------------*/
 /* list*/
 .list-group {
-  margin: 0 25vw;
+  margin: 0rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .list-item {
   list-style: none;
-  width: 45vw;
+  width: 68vw;
   display: inline-flex;
   justify-content: space-between;
   color: var(--color-heading);
   margin-bottom: 2rem;
-  margin-right: 5rem;
+  margin-right: 4rem;
   padding: 2rem 2rem;
   font-size: 1.2rem;
-  border-radius: 8px;
+  border-radius: 5px;
   background-color: var(--color-placeholder);
+}
+@media screen and (min-width: 768px) {
+  .list-group {
+    margin: 0 30vw;
+  }
+  .list-item {
+    width: 33vw;
+  }
 }
 /*----------------------------------------------------------------------------------------------*/
 /* TODO Styling */
@@ -242,7 +288,7 @@ h1 {
   margin-top: 0.5rem;
   color: var(--color-secondarytext);
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .task {
     font-size: 1.8rem;
   }
