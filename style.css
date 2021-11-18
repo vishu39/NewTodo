@@ -26,7 +26,7 @@ body {
 /* main header of our html*/
 .header {
   display: flex;
-  margin: 0rem 29vw;
+  margin: 0rem 25vw;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -83,7 +83,7 @@ h1 {
 /*----------------------------------------------------------------------------------------------*/
 /*btbtns or bottom buttons*/
 .btbtns {
-  margin: 0rem 31vw;
+  margin: 0rem 26vw;
   display: flex;
   justify-content: space-between;
   font-size: 1rem;
@@ -160,7 +160,7 @@ h1 {
 /*container inputs*/
 .container {
   color: var(--color-heading);
-  margin: 0rem 30vw;
+  margin: 0rem 25vw;
   display: flex;
   flex-direction: column;
   background-color: var(--color-header);
@@ -206,14 +206,14 @@ h1 {
 /*----------------------------------------------------------------------------------------------*/
 /* list*/
 .list-group {
-  margin: 0 30vw;
+  margin: 0 25vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .list-item {
   list-style: none;
-  width: 33vw;
+  width: 45vw;
   display: inline-flex;
   justify-content: space-between;
   color: var(--color-heading);
