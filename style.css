@@ -233,14 +233,22 @@ h1 {
   border-left: 2px solid var(--color-button);
 }
 .task {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   padding-left: 2rem;
 }
 .Importance {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-left: 2rem;
   margin-top: 0.5rem;
   color: var(--color-secondarytext);
+}
+@media screen and (min-width: 1024px) {
+  .task {
+    font-size: 1.8rem;
+  }
+  .Importance {
+    font-size: 1.2rem;
+  }
 }
 /*----------------------------------------------------------------------------------------------*/
 /*list icons*/
