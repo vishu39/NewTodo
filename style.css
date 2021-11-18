@@ -70,12 +70,14 @@ h1 {
 }
 /*----------------------------------------------------------------------------------------------*/
 /*button Add task*/
+.addbtn {
+  display: flex;
+  justify-content: center;
+}
 .btn-Add {
   transition: 0.2s;
   font-size: 1rem;
   margin: 1rem 0;
-  position: relative;
-  left: 2rem;
 }
 .btn-Add:hover {
   background-color: #079664;
@@ -88,7 +90,7 @@ h1 {
 /*----------------------------------------------------------------------------------------------*/
 /*btbtns or bottom buttons*/
 .btbtns {
-  margin: 0rem 4rem;
+  margin: 0rem 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -108,7 +110,7 @@ h1 {
   margin-bottom: 1rem;
   transition: 0.2s;
   padding: 1rem 0rem;
-  width: 90vw;
+  width: 80vw;
   font-size: 1rem;
 }
 .btn-All:hover {
@@ -120,7 +122,7 @@ h1 {
   margin-bottom: 1rem;
   transition: 0.2s;
   padding: 1rem 0rem;
-  width: 90vw;
+  width: 80vw;
   font-size: 1rem;
 }
 .btn-completed:hover {
@@ -132,7 +134,7 @@ h1 {
   margin-bottom: 1rem;
   transition: 0.2s;
   padding: 1rem 0rem;
-  width: 90vw;
+  width: 80vw;
   font-size: 1rem;
 }
 .btn-uncompleted:hover {
@@ -167,7 +169,7 @@ h1 {
   .btn-uncompleted {
     font-size: 1.3rem;
     padding: 1rem 0rem;
-    width: 15vw;
+    width: 13vw;
   }
   .btn-streached {
     width: 36vw;
@@ -236,8 +238,12 @@ h1 {
   }
   .input {
     font-size: 1.3rem;
-    width: 35vw;
+    width: 34vw;
   }
+}
+.inp-importance {
+  font-size: 1.3rem;
+  width: 35vw;
 }
 /*-------------------------------------------data List------------------------------------------*/
 
@@ -251,7 +257,7 @@ h1 {
 }
 .list-item {
   list-style: none;
-  width: 68vw;
+  width: 75vw;
   display: inline-flex;
   justify-content: space-between;
   color: var(--color-heading);
