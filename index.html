@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,7 +34,7 @@
         </button>
       </div>
       <!--Input label and add text button-->
-      <div class="container">
+      <form class="container">
         <label class="label" name="todo">Todo</label>
         <input
           id="inp"
@@ -48,12 +48,18 @@
           class="input inp-importance"
           type="text"
           placeholder="Least Important"
+          list="Imp"
         />
+        <datalist id="Imp">
+          <option data-value="1">Least Important</option>
+          <option data-value="2">Important</option>
+          <option data-value="3">Most Important</option>
+        </datalist>
         <input type="hidden" id="index" />
         <button id="sub" type="submit" class="btn btn-Add btn-streached">
           Add
         </button>
-      </div>
+      </form>
       <!--All bottom buttons-->
       <div class="btbtns">
         <button
