@@ -267,7 +267,7 @@ h1 {
   font-size: 1.2rem;
   border-radius: 5px;
   background-color: var(--color-placeholder);
-  transition: 0.3s;
+  transition: all0.5s;
 }
 .list-item:hover {
   box-shadow: 2px 4px 1px 0 var(--color-button);
