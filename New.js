@@ -15,7 +15,7 @@ let todos=[];
  function clearAll(todos) {
  todos=[];
  savedTodos(todos);
- getList(todos);
+ getTodosList(todos);
 };
 
 
@@ -26,32 +26,33 @@ let todos=[];
 
 
 //-------------------------------------done function----------------------------------------------------
- function line(taskId) {
+ function markItemDone(taskId) {
     let index=todos.findIndex((todo)=>todo.taskId===taskId)
     const selected=todos[index];
     selected.complete= !selected.complete;
     savedTodos(todos);
-    getList(todos)
+    getTodosList(todos)
 };
 
 
 
 //--------------------------------------Delete  Button--------------------------------------------------
 //delete button
-function dlt(taskId) {   
+function deleteItems(taskId) {   
     todos=todos.filter((ele)=>ele.taskId !=taskId)
     savedTodos(todos);
-    getList(todos)
+    getTodosList(todos)
 }
 
 
 
 //---------------------------------------Get List--------------------------------------------------------
-let getList=function(todos){
+let getTodosList=function(todos){
     let html = ""; //taking an empty string
  	let uList = document.getElementById("list"); 
 	todos.forEach((item) => {  
    const Itemclass=item.complete?"task-container lined":"task-container";
+   const doneClass=item.complete?"fas fa-check fill":"fas fa-check"
             html += `                             
             <li class="list-item" id="list" taskid=${item.taskId}> 
             <div class="task-container ${Itemclass}" id="line">
@@ -59,8 +60,8 @@ let getList=function(todos){
             <span class="Importance">${item.importancevalue}</span>
             </div>
             <span class="icons icon-box">
-            <i data-done class="fas fa-check" onclick="line(${item.taskId})"></i>
-            <i class="fas fa-trash-alt" onclick="dlt(${item.taskId})"></i
+            <i data-done class="fas fa-check ${doneClass}" onclick="markItemDone(${item.taskId})"></i>
+            <i class="fas fa-trash-alt" onclick="deleteItems(${item.taskId})"></i
             ></span
             </li>`;  
     });
@@ -106,7 +107,7 @@ addButton.addEventListener("click", function (e) {
                 todos.push(itemObj);
                 savedTodos(todos);
             }
-            getList(todos);
+            getTodosList(todos);
         }
         itemInput.value = ""; 
         itemImportance.value = "";
@@ -121,7 +122,7 @@ addButton.addEventListener("click", function (e) {
           });
      });
     getSavedTodos();
-    getList(todos);
+    getTodosList(todos);
 }
 
 
@@ -143,7 +144,7 @@ const getItemsFilter = function (type) {
       default:
         filterItems = todos;
     }
-    getList(filterItems);
+    getTodosList(filterItems);
   };
 
 
