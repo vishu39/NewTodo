@@ -11,44 +11,70 @@ html {
   font-size: 62.5%;
 }
 body {
-  margin: 0%; /*these will remove extra margin space given by the browser*/
-  padding: 0%;
   font-family: "Ubuntu", sans-serif;
-  font-size: 2.4rem;
   background-color: var(--color-header);
 }
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
 /*main div of the page*/
 .main {
   height: auto;
+  margin: 1rem 1rem;
+}
+@media screen and (min-width: 460px) {
+  .main {
+    margin: 2rem 10vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main {
+    margin: 2rem 15vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main {
+    margin: 2rem 25vw;
+  }
 }
 /*----------------------------------------------------------------------------------------------*/
 /* main header of our html*/
 .header {
   display: flex;
-  margin: 0rem 4vw;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-@media screen and (min-width: 768px) {
-  .header {
-    margin: 0% 30vw;
-  }
 }
 /*----------------------------------------------------------------------------------------------*/
 /*heading of our html*/
 h1 {
   color: var(--color-heading);
-  font-size: 2rem;
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 460px) {
+  h1 {
+    font-size: 4.5rem;
+  }
 }
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 3rem;
+    font-size: 4.8rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 5rem;
   }
 }
 /*heading end*/
 /*----------------------------------------------------------------------------------------------*/
 /*it will group every element of the html*/
 /*buttons*/
+/*-----------------------------setting for small screen-------------------------------*/
 .btn {
   font-family: "Ub untu", sans-serif;
   background-color: var(--color-button);
@@ -56,14 +82,19 @@ h1 {
   outline: 0;
   border-radius: 40px;
   cursor: pointer;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+  padding: 1rem 0rem;
+  font-size: 1rem;
 }
-/*----------------------------------------------------------------------------------------------*/
+.btn:hover {
+  background-color: #079664;
+}
 /*button clear*/
 .btnclear {
   transition: 0.2s;
-  margin: 1rem;
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
+  padding: 0% 2rem;
+  margin: 2.8rem 0%;
 }
 .btnclear:hover {
   background-color: #079664;
@@ -75,210 +106,191 @@ h1 {
   justify-content: center;
 }
 .btn-Add {
-  transition: 0.2s;
-  font-size: 1rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
-.btn-Add:hover {
-  background-color: #079664;
-}
-
 .btn-streached {
   padding: 1rem 0;
-  width: 80vw;
+  width: 100%;
+}
+/*-----------------------------setting for medium screen-------------------------------*/
+@media screen and (min-width: 460px) {
+  .btn {
+    font-size: 1.1rem;
+  }
+  .btnclear {
+    margin: 3rem 2rem;
+    padding: 1rem 2rem;
+  }
+}
+/*-----------------------------setting for large screen-------------------------------*/
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 1.3rem;
+  }
+  .btnclear {
+    margin: 3.2rem 2rem;
+    padding: 0.5rem 4rem;
+  }
+  .btn-Add {
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+  }
+}
+/*-----------------------------setting for extra screen-------------------------------*/
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+  .btnclear {
+    margin: 3.5rem 2rem;
+  }
 }
 /*----------------------------------------------------------------------------------------------*/
 /*btbtns or bottom buttons*/
-.btbtns {
-  margin: 0rem 2rem;
+.filter-Container {
+  margin: 2rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  font-size: 1rem;
+}
+.filter-btn {
+  padding: 1.5rem 0rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 460px) {
+  .filter-Container {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  .btn-All {
+    width: 13vw;
+  }
+  .btn-completed {
+    width: 18vw;
+  }
+  .btn-uncompleted {
+    width: 20vw;
+  }
 }
 @media screen and (min-width: 768px) {
-  .btbtns {
+  .filter-Container {
     flex-wrap: nowrap;
-    font-size: 1.3rem;
-    margin: 0rem 31vw;
-    justify-content: space-evenly;
+    justify-content: space-around;
+  }
+  .btn-All {
+    width: 8vw;
+  }
+  .btn-completed {
+    width: 12vw;
+  }
+  .btn-uncompleted {
+    width: 15vw;
   }
 }
 
 /*button All used for showing all task*/
-.btn-All {
-  margin-bottom: 1rem;
-  transition: 0.2s;
-  padding: 1rem 0rem;
-  width: 80vw;
-  font-size: 1rem;
-}
-.btn-All:hover {
-  background-color: #079664;
+.button-primary {
+  background-color: var(--color-button);
+  color: var(--color-body);
 }
 
-/*button Completed  used for showing completed task*/
-.btn-completed {
-  margin-bottom: 1rem;
-  transition: 0.2s;
-  padding: 1rem 0rem;
-  width: 80vw;
-  font-size: 1rem;
-}
-.btn-completed:hover {
-  background-color: #079664;
-}
-
-/*button Uncompleted used for show uncompleted task*/
-.btn-uncompleted {
-  margin-bottom: 1rem;
-  transition: 0.2s;
-  padding: 1rem 0rem;
-  width: 80vw;
-  font-size: 1rem;
-}
-.btn-uncompleted:hover {
-  background-color: #079664;
-}
-
-/*button for desktop version */
-@media screen and (min-width: 768px) {
-  .btn {
-    margin: 2.5rem 0;
-  }
-  .btnclear {
-    margin: 2rem 2rem;
-    padding: 1rem 3rem;
-    font-size: 1.2rem;
-  }
-  .btn-Add {
-    font-size: 1.3rem;
-    margin: 2rem 0rem;
-    left: 0.5em;
-  }
-  .btn-All {
-    font-size: 1.3rem;
-    padding: 1rem 0rem;
-    width: 8vw;
-  }
-  .btn-completed {
-    font-size: 1.3rem;
-    padding: 1rem 0rem;
-    width: 12vw;
-  }
-  .btn-uncompleted {
-    font-size: 1.3rem;
-    padding: 1rem 0rem;
-    width: 13vw;
-  }
-  .btn-streached {
-    width: 36vw;
-  }
-}
-/*@media screen and (min-width: 200px) and (max-width: 450px) {
-  .btn-All {
-    font-size: 1.3rem;
-    padding: 1rem 10rem;
-  }
-  .btn-completed {
-    font-size: 1.3rem;
-    padding: 1rem 7.5rem;
-  }
-  .btn-uncompleted {
-    font-size: 1.3rem;
-    padding: 1rem 7rem;
-  }
-}*/
-/*----------------------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------------------*/
 /*container inputs*/
-.container {
-  margin: 0rem 2rem;
-  color: var(--color-heading);
+.input-container {
   display: flex;
-  flex-direction: column;
-  background-color: var(--color-header);
+  padding: 0rem;
+  margin-top: 1.5rem;
 }
 /*input*/
 .input {
   background-color: var(--color-placeholder);
-  color: var(--color-secondarytext);
+  color: var(--color-heading);
   font-family: "Ubuntu", sans-serif;
   border: 0;
   outline: 0;
   border-radius: 40px;
-  font-size: 1rem;
-  margin-right: 3rem;
-  margin-left: 1.2rem;
-  padding: 0.8rem;
-  width: 80vw;
+  font-size: 1.3rem;
+  padding: 1rem 1rem;
+  width: 100%;
+  padding-left: 2rem;
+  margin: 1rem 0;
 }
 /*labels*/
 .label {
+  display: flex;
   font-size: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-heading);
 }
 /*placeholder*/
 ::placeholder {
   font-family: "Ubuntu", sans-serif;
   color: var(--color-secondarytext);
-  font-size: 1rem;
-  padding: 1rem;
+  font-size: 1.3rem;
 }
-
-@media screen and (min-width: 768px) {
-  .container {
-    margin: 0rem 31vw;
-  }
+@media screen and (min-width: 460px) {
   .label {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
   ::placeholder {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .input {
-    font-size: 1.3rem;
-    width: 34vw;
+    font-size: 1.6rem;
+    width: 100%;
+    height: 3.5rem;
   }
 }
-.inp-importance {
-  font-size: 1.3rem;
-  width: 35vw;
+@media screen and (min-width: 768px) {
+  .label {
+    font-size: 2rem;
+  }
+  ::placeholder {
+    font-size: 1.5rem;
+  }
+  .input {
+    font-size: 1.8rem;
+    width: 100%;
+    height: 4.5rem;
+  }
 }
-/*-------------------------------------------data List------------------------------------------*/
 
 /*----------------------------------------------------------------------------------------------*/
 /* list*/
 .list-group {
-  margin: 0rem 4rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: start;
+  padding: 0;
 }
 .list-item {
   list-style: none;
-  width: 75vw;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   color: var(--color-heading);
   margin-bottom: 2rem;
-  margin-right: 4rem;
   padding: 2rem 2rem;
-  font-size: 1.2rem;
   border-radius: 5px;
   background-color: var(--color-placeholder);
-  transition: all0.5s;
+  transition: all 0.5s;
+  width: 100%;
 }
 .list-item:hover {
   box-shadow: 2px 4px 1px 0 var(--color-button);
   opacity: 0.7;
 }
 @media screen and (min-width: 768px) {
-  .list-group {
-    margin: 0 30vw;
-  }
   .list-item {
-    width: 33vw;
+    width: 100%;
+    height: 10rem;
+  }
+}
+@media screen and (min-width: 460px) {
+  .list-item {
+    width: 100%;
+    height: 10rem;
   }
 }
 /*----------------------------------------------------------------------------------------------*/
@@ -290,6 +302,7 @@ h1 {
   border-left: 2px solid var(--color-button);
 }
 .task {
+  margin-top: 0.5rem;
   font-size: 1.3rem;
   padding-left: 2rem;
 }
@@ -297,23 +310,55 @@ h1 {
   font-size: 1rem;
   padding-left: 2rem;
   margin-top: 0.5rem;
-  color: var(--color-secondarytext);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 460px) {
   .task {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   .Importance {
     font-size: 1.2rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .task {
+    font-size: 1.7rem;
+  }
+  .Importance {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .task {
+    font-size: 2rem;
+  }
+  .Importance {
+    font-size: 1.5rem;
+  }
+}
+
 /*----------------------------------------------------------------------------------------------*/
 /*list icons*/
 .icons {
   display: flex;
   justify-content: right;
   width: 10rem;
+  font-size: 1rem;
   align-items: center;
+}
+@media screen and (min-width: 460px) {
+  .icons {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .icons {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .icons {
+    font-size: 2rem;
+  }
 }
 .fas {
   color: var(--color-body);
