@@ -34,7 +34,7 @@
         </button>
       </div>
       <!--Input label and add text button-->
-      <form class="container">
+      <div class="input-container">
         <label class="label" name="todo">Todo</label>
         <input
           id="inp"
@@ -57,18 +57,18 @@
           <option data-value="3">Most Important</option>
         </datalist>
         <input type="hidden" id="index" />
-        <div class="addbtn">
-          <button id="sub" type="submit" class="btn btn-Add btn-streached">
-            Add
-          </button>
-        </div>
-      </form>
+      </div>
+      <div class="addbtn">
+        <button id="sub" type="submit" class="btn btn-Add btn-streached">
+          Add
+        </button>
+      </div>
       <!--All bottom buttons-->
-      <div class="btbtns">
+      <div class="filter-Container">
         <button
           id="All"
           type="submit"
-          class="btn btn-All filter-btn"
+          class="btn btn-All filter-btn button-primary"
           data-type="All"
         >
           All
@@ -76,7 +76,7 @@
         <button
           id="comp"
           type="submit"
-          class="btn btn-completed filter-btn"
+          class="btn btn-completed filter-btn button-primary"
           data-type="completed"
         >
           Completed
@@ -84,7 +84,7 @@
         <button
           id="uncomp"
           type="submit"
-          class="btn btn-uncompleted filter-btn"
+          class="btn btn-uncompleted filter-btn button-primary"
           data-type="uncompleted"
         >
           Uncompleted
